@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>所有issue-Market - My Curiosity Blog</title>
+    <link>https://przutto.github.io/issue-market/</link>
+    <description>My Curiosity Blog</description>
+    <generator>Hugo 0.148.2 &amp; FixIt v0.4.0-alpha-20250805041424-57ccd470</generator>
+    <language>en-us</language>
+    <lastBuildDate></lastBuildDate>
+    <atom:link href="https://przutto.github.io/issue-market/index.xml" rel="self" type="application/rss+xml" />
+  </channel>
+</rss>

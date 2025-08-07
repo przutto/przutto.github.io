@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>AI-Server - 标签 - My Curiosity Blog</title>
+    <link>https://przutto.github.io/tags/ai-server/</link>
+    <description>My Curiosity Blog</description>
+    <generator>Hugo 0.148.2 &amp; FixIt v0.4.0-alpha-20250805041424-57ccd470</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 07 Aug 2025 20:27:52 +0800</lastBuildDate>
+    <atom:link href="https://przutto.github.io/tags/ai-server/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Ai Workstation Hardware Selection</title>
+      <link>https://przutto.github.io/ai-server/1558209/</link>
+      <pubDate>Thu, 07 Aug 2025 20:27:52 +0800</pubDate>
+      <guid>https://przutto.github.io/ai-server/1558209/</guid>
+      <category domain="https://przutto.github.io/categories/draft/">Draft</category>
+      <description>&lt;p&gt;对于热衷于AI开发的极客们来说，拥有一台性能强劲、扩展性拉满的AI工作站是提升效率、探索前沿技术的关键。本文将分享一个经过精心规划和实践验证的硬件选型方案，旨在以极致性价比打造一台能够同时兼顾日常使用和未来AI工作负载升级的强大机器。&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>
