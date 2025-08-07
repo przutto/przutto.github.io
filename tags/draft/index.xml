@@ -2,27 +2,19 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Draft - 标签 - My Curiosity Blog</title>
-    <link>http://localhost:1313/tags/draft/</link>
+    <link>https://przutto.github.io/tags/draft/</link>
     <description>My Curiosity Blog</description>
     <generator>Hugo 0.148.2 &amp; FixIt v0.4.0-alpha-20250805041424-57ccd470</generator>
     <language>en-us</language>
     <lastBuildDate>Thu, 07 Aug 2025 21:29:44 +0800</lastBuildDate>
-    <atom:link href="http://localhost:1313/tags/draft/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://przutto.github.io/tags/draft/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Demo1</title>
-      <link>http://localhost:1313/posts/b1afe1c/</link>
+      <link>https://przutto.github.io/posts/b1afe1c/</link>
       <pubDate>Thu, 07 Aug 2025 21:29:44 +0800</pubDate>
-      <guid>http://localhost:1313/posts/b1afe1c/</guid>
-      <category domain="http://localhost:1313/categories/draft/">Draft</category>
+      <guid>https://przutto.github.io/posts/b1afe1c/</guid>
+      <category domain="https://przutto.github.io/categories/draft/">Draft</category>
       <description>&lt;p&gt;😃哈哈&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>Hugo Site Setup</title>
-      <link>http://localhost:1313/posts/c520703/</link>
-      <pubDate>Thu, 07 Aug 2025 20:32:40 +0800</pubDate>
-      <guid>http://localhost:1313/posts/c520703/</guid>
-      <category domain="http://localhost:1313/categories/draft/">Draft</category>
-      <description>&lt;p&gt;记录在配置这个site过程中遇到的各种问题，这是一个问题组成的大市场。&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

@@ -7,5 +7,5 @@
 ---
 
 > 作者: pr_zutto  
-> URL: http://localhost:1313/posts/b1afe1c/  
+> URL: https://przutto.github.io/posts/b1afe1c/  
 

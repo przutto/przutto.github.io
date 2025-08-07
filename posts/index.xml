@@ -6,7 +6,15 @@
     <description>My Curiosity Blog</description>
     <generator>Hugo 0.148.2 &amp; FixIt v0.4.0-alpha-20250805041424-57ccd470</generator>
     <language>en-us</language>
-    <lastBuildDate></lastBuildDate>
+    <lastBuildDate>Thu, 07 Aug 2025 21:29:44 +0800</lastBuildDate>
     <atom:link href="https://przutto.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Demo1</title>
+      <link>https://przutto.github.io/posts/b1afe1c/</link>
+      <pubDate>Thu, 07 Aug 2025 21:29:44 +0800</pubDate>
+      <guid>https://przutto.github.io/posts/b1afe1c/</guid>
+      <category domain="https://przutto.github.io/categories/draft/">Draft</category>
+      <description>&lt;p&gt;😃哈哈&lt;/p&gt;</description>
+    </item>
   </channel>
 </rss>
