@@ -2,35 +2,11 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>所有文章 - My Curiosity Blog</title>
-    <link>http://localhost:1313/posts/</link>
+    <link>https://przutto.github.io/posts/</link>
     <description>My Curiosity Blog</description>
     <generator>Hugo 0.148.2 &amp; FixIt v0.4.0-alpha-20250805041424-57ccd470</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 07 Aug 2025 21:29:44 +0800</lastBuildDate>
-    <atom:link href="http://localhost:1313/posts/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>Demo1</title>
-      <link>http://localhost:1313/posts/b1afe1c/</link>
-      <pubDate>Thu, 07 Aug 2025 21:29:44 +0800</pubDate>
-      <guid>http://localhost:1313/posts/b1afe1c/</guid>
-      <category domain="http://localhost:1313/categories/draft/">Draft</category>
-      <description>&lt;p&gt;😃哈哈&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>Hugo Site Setup</title>
-      <link>http://localhost:1313/posts/c520703/</link>
-      <pubDate>Thu, 07 Aug 2025 20:32:40 +0800</pubDate>
-      <guid>http://localhost:1313/posts/c520703/</guid>
-      <category domain="http://localhost:1313/categories/draft/">Draft</category>
-      <description>&lt;p&gt;记录在配置这个site过程中遇到的各种问题，这是一个问题组成的大市场。&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>Ai Workstation Hardware Selection</title>
-      <link>http://localhost:1313/posts/1558209/</link>
-      <pubDate>Thu, 07 Aug 2025 20:27:52 +0800</pubDate>
-      <guid>http://localhost:1313/posts/1558209/</guid>
-      <category domain="http://localhost:1313/categories/draft/">Draft</category>
-      <description>&lt;p&gt;对于热衷于AI开发的极客们来说，拥有一台性能强劲、扩展性拉满的AI工作站是提升效率、探索前沿技术的关键。本文将分享一个经过精心规划和实践验证的硬件选型方案，旨在以极致性价比打造一台能够同时兼顾日常使用和未来AI工作负载升级的强大机器。&lt;/p&gt;</description>
-    </item>
+    <lastBuildDate></lastBuildDate>
+    <atom:link href="https://przutto.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
   </channel>
 </rss>
