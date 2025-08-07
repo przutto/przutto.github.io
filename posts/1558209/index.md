@@ -74,5 +74,5 @@
 ---
 
 > 作者: pr_zutto  
-> URL: http://localhost:1313/ai-server/1558209/  
+> URL: http://localhost:1313/posts/1558209/  
 

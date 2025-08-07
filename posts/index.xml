@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Draft - 分类 - My Curiosity Blog</title>
-    <link>http://localhost:1313/categories/draft/</link>
+    <title>所有文章 - My Curiosity Blog</title>
+    <link>http://localhost:1313/posts/</link>
     <description>My Curiosity Blog</description>
     <generator>Hugo 0.148.2 &amp; FixIt v0.4.0-alpha-20250805041424-57ccd470</generator>
     <language>en-us</language>
     <lastBuildDate>Thu, 07 Aug 2025 21:29:44 +0800</lastBuildDate>
-    <atom:link href="http://localhost:1313/categories/draft/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/posts/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Demo1</title>
       <link>http://localhost:1313/posts/b1afe1c/</link>
