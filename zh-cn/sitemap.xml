@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <url>
+    <loc>https://przutto.github.io/posts/</loc>
+    <lastmod>2025-08-07T21:29:44+08:00</lastmod>
+  </url>
+  <url>
+    <loc>https://przutto.github.io/</loc>
+    <lastmod>2025-08-07T21:29:44+08:00</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://przutto.github.io/en/"/>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://przutto.github.io/"/>
+  </url>
+  <url>
+    <loc>https://przutto.github.io/issue-market/</loc>
+    <lastmod>2025-08-07T20:32:40+08:00</lastmod>
+  </url>
+  <url>
+    <loc>https://przutto.github.io/ai-server/</loc>
+    <lastmod>2025-08-07T20:27:52+08:00</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://przutto.github.io/en/ai-server/"/>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://przutto.github.io/ai-server/"/>
+  </url>
+  <url>
+    <loc>https://przutto.github.io/tags/ai-workstation/</loc>
+    <lastmod>2025-08-07T20:27:52+08:00</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://przutto.github.io/en/tags/ai-workstation/"/>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://przutto.github.io/tags/ai-workstation/"/>
+  </url>
+  <url>
+    <loc>https://przutto.github.io/categories/ai-%E5%B7%A5%E4%BD%9C%E7%AB%99-%E5%AE%8C%E5%85%A8%E9%85%8D%E7%BD%AE%E6%8C%87%E5%8D%97/</loc>
+    <lastmod>2025-08-07T20:27:52+08:00</lastmod>
+  </url>
+  <url>
+    <loc>https://przutto.github.io/ai-server/1558209/</loc>
+    <lastmod>2025-08-07T20:27:52+08:00</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://przutto.github.io/en/ai-server/1558208/"/>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://przutto.github.io/ai-server/1558209/"/>
+  </url>
+  <url>
+    <loc>https://przutto.github.io/categories/</loc>
+    <lastmod>2025-08-07T20:27:52+08:00</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://przutto.github.io/en/categories/"/>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://przutto.github.io/categories/"/>
+  </url>
+  <url>
+    <loc>https://przutto.github.io/tags/</loc>
+    <lastmod>2025-08-07T20:27:52+08:00</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://przutto.github.io/en/tags/"/>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://przutto.github.io/tags/"/>
+  </url>
+  <url>
+    <loc>https://przutto.github.io/collections/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://przutto.github.io/en/collections/"/>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://przutto.github.io/collections/"/>
+  </url>
+</urlset>

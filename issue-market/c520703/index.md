@@ -1,4 +1,4 @@
-# Hugo Site Setup
+# Hugo Site Setup Issue
 
 
 记录在配置这个site过程中遇到的各种问题，这是一个问题组成的大市场。

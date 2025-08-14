@@ -1,20 +1,12 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>所有文章 - My Curiosity Blog</title>
+    <title>所有文章 - 好奇心 日志</title>
     <link>https://przutto.github.io/posts/</link>
-    <description>My Curiosity Blog</description>
+    <description>好奇心 日志</description>
     <generator>Hugo 0.148.2 &amp; FixIt v0.4.0-alpha-20250805041424-57ccd470</generator>
-    <language>en-us</language>
-    <lastBuildDate>Thu, 07 Aug 2025 21:29:44 +0800</lastBuildDate>
+    <language>zh-CN</language>
+    <lastBuildDate></lastBuildDate>
     <atom:link href="https://przutto.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>Demo1</title>
-      <link>https://przutto.github.io/posts/b1afe1c/</link>
-      <pubDate>Thu, 07 Aug 2025 21:29:44 +0800</pubDate>
-      <guid>https://przutto.github.io/posts/b1afe1c/</guid>
-      <category domain="https://przutto.github.io/categories/draft/">Draft</category>
-      <description>&lt;p&gt;😃哈哈&lt;/p&gt;</description>
-    </item>
   </channel>
 </rss>
