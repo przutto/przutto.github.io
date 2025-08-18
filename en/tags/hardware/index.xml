@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Hardware - Tag - Origami Mind</title>
+    <link>https://przutto.github.io/en/tags/hardware/</link>
+    <description>When technology, life, AI, and experiences intertwine, what kind of spark is created? Here, I&#39;ll share my personal projects, document my reflections and journeys, and explore this world of endless possibilities with you.</description>
+    <generator>Hugo 0.148.2 &amp; FixIt v0.4.0-alpha-20250805041424-57ccd470</generator>
+    <language>en</language>
+    <managingEditor>przutto520@gmail.com (pr_zutto)</managingEditor>
+    <webMaster>przutto520@gmail.com (pr_zutto)</webMaster>
+    <lastBuildDate>Thu, 07 Aug 2025 21:27:52 +0800</lastBuildDate>
+    <atom:link href="https://przutto.github.io/en/tags/hardware/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>The Ultimate Guide to Cost-Effective AI Workstation Hardware Selection</title>
+      <link>https://przutto.github.io/en/ai-server/1558208/</link>
+      <pubDate>Thu, 07 Aug 2025 21:27:52 +0800</pubDate><author>przutto520@gmail.com (pr_zutto)</author>
+      <guid>https://przutto.github.io/en/ai-server/1558208/</guid>
+      <category domain="https://przutto.github.io/en/categories/complete-ai-workstation-configuration-guide/">Complete AI Workstation Configuration Guide</category>
+      <description>&lt;p&gt;For geeks who are passionate about AI development, having a powerful and highly expandable AI workstation is key to improving efficiency and exploring cutting-edge technology. This article will share a carefully planned and practically verified hardware selection plan, aiming to build a powerful machine with the ultimate cost-performance that can handle both daily use and future AI workload upgrades.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

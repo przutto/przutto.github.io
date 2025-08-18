@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>OS - 标签 - 思维折痕</title>
+    <link>https://przutto.github.io/tags/os/</link>
+    <description>When technology, life, AI, and experiences intertwine, what kind of spark is created? Here, I&#39;ll share my personal projects, document my reflections and journeys, and explore this world of endless possibilities with you.</description>
+    <generator>Hugo 0.148.2 &amp; FixIt v0.4.0-alpha-20250805041424-57ccd470</generator>
+    <language>zh-CN</language>
+    <managingEditor>przutto520@gmail.com (pr_zutto)</managingEditor>
+    <webMaster>przutto520@gmail.com (pr_zutto)</webMaster>
+    <lastBuildDate>Mon, 18 Aug 2025 19:54:43 +0800</lastBuildDate>
+    <atom:link href="https://przutto.github.io/tags/os/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>AI 工作站系统选型</title>
+      <link>https://przutto.github.io/ai-server/dd4a6d4/</link>
+      <pubDate>Mon, 18 Aug 2025 19:54:43 +0800</pubDate><author>przutto520@gmail.com (pr_zutto)</author>
+      <guid>https://przutto.github.io/ai-server/dd4a6d4/</guid>
+      <category domain="https://przutto.github.io/categories/ai-%E5%B7%A5%E4%BD%9C%E7%AB%99-%E5%AE%8C%E5%85%A8%E9%85%8D%E7%BD%AE%E6%8C%87%E5%8D%97/">AI-工作站 完全配置指南</category>
+      <description>&lt;p&gt;在为 AI 工作负载选择操作系统时，Windows 和 Linux 就像硬币的两面，各自拥有独特的优势与痛点。这篇总结源自我近半年的亲身实践，记录了在两大系统间反复横跳的经历，最终得出了一个对 AI 从业者极具价值的结论。&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

@@ -1,11 +1,13 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>所有文章 - 好奇心 日志</title>
+    <title>所有文章 - 思维折痕</title>
     <link>https://przutto.github.io/posts/</link>
-    <description>好奇心 日志</description>
+    <description>When technology, life, AI, and experiences intertwine, what kind of spark is created? Here, I&#39;ll share my personal projects, document my reflections and journeys, and explore this world of endless possibilities with you.</description>
     <generator>Hugo 0.148.2 &amp; FixIt v0.4.0-alpha-20250805041424-57ccd470</generator>
     <language>zh-CN</language>
+    <managingEditor>przutto520@gmail.com (pr_zutto)</managingEditor>
+    <webMaster>przutto520@gmail.com (pr_zutto)</webMaster>
     <lastBuildDate></lastBuildDate>
     <atom:link href="https://przutto.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
   </channel>

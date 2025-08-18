@@ -1,17 +1,27 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>All Ai-Server - Curiosity Blog</title>
+    <title>All Ai-Server - Origami Mind</title>
     <link>https://przutto.github.io/en/ai-server/</link>
-    <description>Curiosity Blog</description>
+    <description>When technology, life, AI, and experiences intertwine, what kind of spark is created? Here, I&#39;ll share my personal projects, document my reflections and journeys, and explore this world of endless possibilities with you.</description>
     <generator>Hugo 0.148.2 &amp; FixIt v0.4.0-alpha-20250805041424-57ccd470</generator>
     <language>en</language>
-    <lastBuildDate>Thu, 07 Aug 2025 20:27:52 +0800</lastBuildDate>
+    <managingEditor>przutto520@gmail.com (pr_zutto)</managingEditor>
+    <webMaster>przutto520@gmail.com (pr_zutto)</webMaster>
+    <lastBuildDate>Mon, 18 Aug 2025 20:51:07 +0800</lastBuildDate>
     <atom:link href="https://przutto.github.io/en/ai-server/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Hardware Selection Guide for an AI Workstation</title>
+      <title>AI Workstation OS Selection</title>
+      <link>https://przutto.github.io/en/ai-server/80b0c46/</link>
+      <pubDate>Mon, 18 Aug 2025 20:51:07 +0800</pubDate><author>przutto520@gmail.com (pr_zutto)</author>
+      <guid>https://przutto.github.io/en/ai-server/80b0c46/</guid>
+      <category domain="https://przutto.github.io/en/categories/complete-ai-workstation-configuration-guide/">Complete AI Workstation Configuration Guide</category>
+      <description>&lt;p&gt;When it comes to choosing an operating system for AI workloads, Windows and Linux are two sides of the same coin, each with unique advantages and pain points. This summary is based on my personal experience over half a year, documenting a journey of switching back and forth between the two systems, which ultimately led to a valuable conclusion for any AI professional.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>The Ultimate Guide to Cost-Effective AI Workstation Hardware Selection</title>
       <link>https://przutto.github.io/en/ai-server/1558208/</link>
-      <pubDate>Thu, 07 Aug 2025 20:27:52 +0800</pubDate>
+      <pubDate>Thu, 07 Aug 2025 21:27:52 +0800</pubDate><author>przutto520@gmail.com (pr_zutto)</author>
       <guid>https://przutto.github.io/en/ai-server/1558208/</guid>
       <category domain="https://przutto.github.io/en/categories/complete-ai-workstation-configuration-guide/">Complete AI Workstation Configuration Guide</category>
       <description>&lt;p&gt;For geeks who are passionate about AI development, having a powerful and highly expandable AI workstation is key to improving efficiency and exploring cutting-edge technology. This article will share a carefully planned and practically verified hardware selection plan, aiming to build a powerful machine with the ultimate cost-performance that can handle both daily use and future AI workload upgrades.&lt;/p&gt;</description>

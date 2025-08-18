@@ -1,43 +1,45 @@
-# AI工作站硬件选型
+# AI 工作站硬件选型指南
 
 
 对于热衷于AI开发的极客们来说，拥有一台性能强劲、扩展性拉满的AI工作站是提升效率、探索前沿技术的关键。本文将分享一个经过精心规划和实践验证的硬件选型方案，旨在以极致性价比打造一台能够同时兼顾日常使用和未来AI工作负载升级的强大机器。
 
 <!--more-->
-{{< image src="./images/ai-server-example.png" caption="AI工作站 整体效果" width="50%" >}}
+{{< image src="./images/ai-workstation-example.png" alt="AI工作站 整体效果" caption="AI工作站 整体效果" width="50%" >}}
 
 
 这台工作站的核心定位非常明确：一台能够完全替代 Windows、以 AI 开发为主要任务的主力机。为了应对未来多变的 AI 工作负载，我们必须为硬件配置预留足够的“成长空间”。这意味着至少要能支持四张显卡，且所有 PCIe 接口的速度都不能成为瓶颈。因此，我们的核心要求是：CPU 至少提供 $4 \times 16 = 64$ 条 PCIe 4.0 通道，以确保多卡并行计算的效率。
 
-## **核心组件：性能与扩展性的完美平衡**
+### **核心组件：性能与扩展性的完美平衡**
 
 * **CPU：AMD EPYC™ 7542——二手市场的“性价比之王”**
 
-    {{< image src="./images/amd-epyc-7000.png" caption="AMD-EPYC-7000系列CPU" width="80%" >}}
+    {{< image src="./images/amd-epyc-7000.png" alt="AMD-EPYC-7000系列CPU" caption="AMD-EPYC-7000系列CPU" width="60%" >}}
 
     面对上述严苛的 PCIe 通道需求，我们很快将目光锁定在了服务器级别的 AMD EPYC 系列。其超高的 Serdes 通道数与亲民的二手价格，让它在工作站领域大放异彩。综合考量日常使用的响应速度，我们选择了 AMD EPYC™ 7542 这款 32 核 64 线程的处理器。它高达 3.4GHz 的加速频率，在保证多任务并行能力的同时，也能兼顾单核性能，真正做到了“鱼与熊掌”兼得。
 
 * **主板：Supermicro H12SSL-i——为AI而生**
 
-    {{< image src="./images/Supermicro-H12SSL-i-pcb.png" caption="Supermicro-H12SSL-i PCB" width="80%" >}}
+    {{< image src="./images/Supermicro-H12SSL-i-pcb.png" alt="Supermicro-H12SSL-i PCB" caption="Supermicro-H12SSL-i PCB" width="60%" >}}
 
-    {{< image src="./images/Supermicro-H12SSL-i-block.png" caption="Supermicro-H12SSL-i 功能框图" width="80%" >}}
+    选择了强大的 EPYC CPU，与之匹配的主板自然也非等闲之辈。Supermicro H12SSL-i 这款主板凭借其惊人的扩展性脱颖而出：它提供了 5 个 PCIe 4.0 x16 插槽和 2 个 PCIe 4.0 x8 插槽，完美满足了多卡部署的需求。
 
-    选择了强大的 EPYC CPU，与之匹配的主板自然也非等闲之辈。Supermicro H12SSL-i 这款主板凭借其惊人的扩展性脱颖而出：它提供了 5 个 PCIe 4.0 x16 插槽和 2 个 PCIe 4.0 x8 插槽，完美满足了多卡部署的需求。同时，8 条 DIMM 内存插槽最高支持 2TB ECC 内存，这为未来加载大型语言模型（如使用 `llama.cpp`）提供了坚实的内存保障，彻底告别“内存焦虑”。不过，服务器主板带来的 IPMI 等高级功能也需要一定的学习成本，但这无疑是值得的。
+    {{< image src="./images/Supermicro-H12SSL-i-block.png" alt="Supermicro-H12SSL-i 功能框图" caption="Supermicro-H12SSL-i 功能框图" width="60%" >}}
+
+    同时，8 条 DIMM 内存插槽最高支持 2TB ECC 内存，这为未来加载大型语言模型（如使用 `llama.cpp`）提供了坚实的内存保障，彻底告别“内存焦虑”。不过，服务器主板带来的 IPMI 等高级功能也需要一定的学习成本，但这无疑是值得的。
 
 * **内存：从够用，到“喂饱”LLM**
 
-    {{< image src="./images/ddr4-ram.png" caption="DDR4 ECC RDIMM 内存条" width="80%" >}}
+    {{< image src="./images/ddr4-ram.png" alt="DDR4 ECC RDIMM 内存条" caption="DDR4 ECC RDIMM 内存条" width="60%" >}}
 
     最初的配置是 4 条 32GB DDR4 3200MHz ECC 内存，总计 128GB。虽然在当时看来相当充裕，但在今天的 LLM 时代，这已经显得捉襟见肘。因此，我们强烈建议将内存容量升级至 512GB 甚至 1TB，这将极大地提升处理大型模型时的效率。
 
-## **显卡：RTX-4060-16G——AI工作负载的甜品卡**
+### **显卡：RTX-4060-16G——AI工作负载的甜品卡**
 
-{{< image src="./images/NVIDIA-RTX-4060-Ti-16G.png" caption="NVIDIA RTX-4060-Ti-16G" width="80%" >}}
+{{< image src="./images/NVIDIA-RTX-4060-Ti-16G.png" alt="NVIDIA RTX-4060-Ti-16G" caption="NVIDIA RTX-4060-Ti-16G" width="60%" >}}
 
 对于AI工作负载，显存容量往往比绝对性能更重要。NVIDIA RTX-4060-Ti-16G 凭借其 16GB 的大显存和相对较低的功耗，成为了初期投入的最佳选择。它在 AI 负载上的性价比无人能敌。初期可以先配置一张，后续根据训练需求，逐步增加至四张，或更换为更高阶的显卡。
 
-## **电源、机箱与散热：为稳定运行保驾护航**
+### **电源、机箱与散热：为稳定运行保驾护航**
 
 * **电源**：
 
@@ -51,13 +53,13 @@
 
     稳定是长期工作的基石。我们选择了全风冷方案，并配置了多达 7 个追风者机箱风扇（6个14cm，1个16cm），以及专用的 EPYC 散热器，确保这台“AI猛兽”在长时间高负载运行下，依然能保持冷静。
 
-## **存储：速度与备份两手抓**
+### **存储：速度与备份两手抓**
 
-{{< image src="./images/ZHITAI-SSD.png" caption="ZHITAI-SSD" width="80%" >}}
+{{< image src="./images/ZHITAI-SSD.png" alt="ZHITAI-SSD" caption="ZHITAI-SSD" width="60%" >}}
 
 存储方案采用了“SSD+HDD”的组合：长江存储的 NVMe SSD 作为系统盘和常用应用盘，提供极致的读写速度；而西部数据的紫盘 HDD，则作为数据备份盘，其为监控优化的 7x24 小时高可靠性，为你的珍贵数据保驾护航。
 
-## **最终配置清单**
+### **最终配置清单**
 
 | **组件** | **型号/规格** | **关键参数** | **数量** | **备注** |
 | :--- | :--- | :--- | :--- | :--- |
