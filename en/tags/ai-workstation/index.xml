@@ -8,8 +8,16 @@
     <language>en</language>
     <managingEditor>przutto520@gmail.com (pr_zutto)</managingEditor>
     <webMaster>przutto520@gmail.com (pr_zutto)</webMaster>
-    <lastBuildDate>Mon, 18 Aug 2025 20:51:07 +0800</lastBuildDate>
+    <lastBuildDate>Tue, 19 Aug 2025 22:20:08 +0800</lastBuildDate>
     <atom:link href="https://przutto.github.io/en/tags/ai-workstation/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Linux System Partition Policy</title>
+      <link>https://przutto.github.io/en/ai-server/1b15ccc/</link>
+      <pubDate>Tue, 19 Aug 2025 22:20:08 +0800</pubDate><author>przutto520@gmail.com (pr_zutto)</author>
+      <guid>https://przutto.github.io/en/ai-server/1b15ccc/</guid>
+      <category domain="https://przutto.github.io/en/categories/complete-ai-workstation-configuration-guide/">Complete AI Workstation Configuration Guide</category>
+      <description>&lt;p&gt;This series of AI workstations features a combination of SSD and HDD drives, and it&amp;rsquo;s crucial to allocate and optimize these resources effectively.&lt;/p&gt;&#xA;&lt;p&gt;System: Ubuntu-24.04&lt;/p&gt;</description>
+    </item>
     <item>
       <title>AI Workstation OS Selection</title>
       <link>https://przutto.github.io/en/ai-server/80b0c46/</link>

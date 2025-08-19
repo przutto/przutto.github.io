@@ -8,8 +8,16 @@
     <language>zh-CN</language>
     <managingEditor>przutto520@gmail.com (pr_zutto)</managingEditor>
     <webMaster>przutto520@gmail.com (pr_zutto)</webMaster>
-    <lastBuildDate>Mon, 18 Aug 2025 19:54:43 +0800</lastBuildDate>
+    <lastBuildDate>Tue, 19 Aug 2025 21:38:07 +0800</lastBuildDate>
     <atom:link href="https://przutto.github.io/categories/ai-%E5%B7%A5%E4%BD%9C%E7%AB%99-%E5%AE%8C%E5%85%A8%E9%85%8D%E7%BD%AE%E6%8C%87%E5%8D%97/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Linux系统分区策略</title>
+      <link>https://przutto.github.io/ai-server/aef70e5/</link>
+      <pubDate>Tue, 19 Aug 2025 21:38:07 +0800</pubDate><author>przutto520@gmail.com (pr_zutto)</author>
+      <guid>https://przutto.github.io/ai-server/aef70e5/</guid>
+      <category domain="https://przutto.github.io/categories/ai-%E5%B7%A5%E4%BD%9C%E7%AB%99-%E5%AE%8C%E5%85%A8%E9%85%8D%E7%BD%AE%E6%8C%87%E5%8D%97/">AI-工作站 完全配置指南</category>
+      <description>&lt;p&gt;本系列的AI-工作站的硬盘配置是SSD+HDD组合，合理分配和优化这些资源非常重要。&lt;/p&gt;&#xA;&lt;p&gt;系统：Ubuntu-24.04&lt;/p&gt;</description>
+    </item>
     <item>
       <title>AI 工作站系统选型</title>
       <link>https://przutto.github.io/ai-server/dd4a6d4/</link>
