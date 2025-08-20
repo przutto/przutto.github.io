@@ -2,9 +2,15 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://przutto.github.io/ai-server/</loc>
-    <lastmod>2025-08-19T21:38:07+08:00</lastmod>
+    <lastmod>2025-08-20T19:45:16+08:00</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://przutto.github.io/en/ai-server/"/>
     <xhtml:link rel="alternate" hreflang="zh-CN" href="https://przutto.github.io/ai-server/"/>
+  </url>
+  <url>
+    <loc>https://przutto.github.io/</loc>
+    <lastmod>2025-08-20T19:45:16+08:00</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://przutto.github.io/en/"/>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://przutto.github.io/"/>
   </url>
   <url>
     <loc>https://przutto.github.io/tags/ai-workstation/</loc>
@@ -39,12 +45,6 @@
     <lastmod>2025-08-19T21:38:07+08:00</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://przutto.github.io/en/tags/"/>
     <xhtml:link rel="alternate" hreflang="zh-CN" href="https://przutto.github.io/tags/"/>
-  </url>
-  <url>
-    <loc>https://przutto.github.io/</loc>
-    <lastmod>2025-08-19T21:38:07+08:00</lastmod>
-    <xhtml:link rel="alternate" hreflang="en" href="https://przutto.github.io/en/"/>
-    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://przutto.github.io/"/>
   </url>
   <url>
     <loc>https://przutto.github.io/ai-server/dd4a6d4/</loc>
