@@ -12,8 +12,8 @@
 <meta name="description" content="When technology, life, AI, and experiences intertwine, what kind of spark is created? Here, I&#39;ll share my personal projects, document my reflections and journeys, and explore this world of endless possibilities with you."><meta name="keywords" content='technology, life, AI, experience'>
   <meta itemprop="name" content="思维折痕">
   <meta itemprop="description" content="When technology, life, AI, and experiences intertwine, what kind of spark is created? Here, I&#39;ll share my personal projects, document my reflections and journeys, and explore this world of endless possibilities with you.">
-  <meta itemprop="datePublished" content="2025-08-20T19:45:16+08:00">
-  <meta itemprop="dateModified" content="2025-08-20T19:45:16+08:00"><meta property="og:url" content="https://przutto.github.io/">
+  <meta itemprop="datePublished" content="2025-08-23T19:45:16+08:00">
+  <meta itemprop="dateModified" content="2025-08-23T19:45:16+08:00"><meta property="og:url" content="https://przutto.github.io/">
   <meta property="og:site_name" content="思维折痕">
   <meta property="og:title" content="思维折痕">
   <meta property="og:description" content="When technology, life, AI, and experiences intertwine, what kind of spark is created? Here, I&#39;ll share my personal projects, document my reflections and journeys, and explore this world of endless possibilities with you.">
@@ -44,7 +44,18 @@
       <ul class="menu"><li class="menu-item">
               <a class="menu-link" href="/archives/"><i class="fa-solid fa-archive"></i> 文章</a></li><li class="menu-item">
               <a class="menu-link" href="/tags/"><i class="fa-solid fa-tags"></i> 标签</a></li><li class="menu-item">
-              <a class="menu-link" href="/categories/"><i class="fa-solid fa-folder-tree"></i> 分类</a></li><li class="menu-item delimiter"></li><li class="menu-item theme-switch" title="切换主题">
+              <a class="menu-link" href="/categories/"><i class="fa-solid fa-folder-tree"></i> 分类</a></li><li class="menu-item delimiter"></li><li class="menu-item search" id="search-desktop">
+            <input type="text" placeholder="搜索文章标题或内容……" id="search-input-desktop">
+            <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-desktop" title="搜索">
+              <i class="fa-solid fa-search fa-fw" aria-hidden="true"></i>
+            </a>
+            <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-desktop" title="清空">
+              <i class="fa-solid fa-times-circle fa-fw" aria-hidden="true"></i>
+            </a>
+            <span class="search-button search-loading" id="search-loading-desktop">
+              <i class="fa-solid fa-spinner fa-fw fa-spin" aria-hidden="true"></i>
+            </span>
+          </li><li class="menu-item theme-switch" title="切换主题">
           <i class="fa-solid fa-adjust fa-fw" aria-hidden="true"></i>
         </li><li class="menu-item language-switch">
             <span role="button" aria-label="选择语言" title="选择语言"><i class="fa-solid fa-language fa-fw" aria-hidden="true"></i></span>
@@ -62,7 +73,23 @@
       </div>
     </div>
     <nav>
-      <ul class="menu" id="menu-mobile"><li class="menu-item"><a class="menu-link" href="/archives/"><i class="fa-solid fa-archive"></i> 文章</a></li><li class="menu-item"><a class="menu-link" href="/tags/"><i class="fa-solid fa-tags"></i> 标签</a></li><li class="menu-item"><a class="menu-link" href="/categories/"><i class="fa-solid fa-folder-tree"></i> 分类</a></li><li class="menu-item menu-system">
+      <ul class="menu" id="menu-mobile"><li class="search-wrapper">
+            <div class="search mobile" id="search-mobile">
+              <input type="text" placeholder="搜索文章标题或内容……" id="search-input-mobile">
+              <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-mobile" title="搜索">
+                <i class="fa-solid fa-search fa-fw" aria-hidden="true"></i>
+              </a>
+              <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-mobile" title="清空">
+                <i class="fa-solid fa-times-circle fa-fw" aria-hidden="true"></i>
+              </a>
+              <span class="search-button search-loading" id="search-loading-mobile">
+                <i class="fa-solid fa-spinner fa-fw fa-spin" aria-hidden="true"></i>
+              </span>
+            </div>
+            <a href="javascript:void(0);" class="search-cancel" id="search-cancel-mobile">
+              取消
+            </a>
+          </li><li class="menu-item"><a class="menu-link" href="/archives/"><i class="fa-solid fa-archive"></i> 文章</a></li><li class="menu-item"><a class="menu-link" href="/tags/"><i class="fa-solid fa-tags"></i> 标签</a></li><li class="menu-item"><a class="menu-link" href="/categories/"><i class="fa-solid fa-folder-tree"></i> 分类</a></li><li class="menu-item menu-system">
           <span class="menu-system-item theme-switch" title="切换主题"><i class="fa-solid fa-adjust fa-fw" aria-hidden="true"></i></span><span class="menu-system-item language-switch">
               <span role="button" aria-label="选择语言" title="选择语言">简体中文<i class="dropdown-icon fa-solid fa-chevron-down" aria-hidden="true"></i></span>
               <select class="language-select" onchange="location = this.value;"><option value="/en/">English</option><option value="/" selected disabled>简体中文</option></select>
@@ -70,7 +97,15 @@
       </ul>
     </nav>
   </div>
-</header><main class="container"><div class="page home posts"><article class="single summary" itemscope itemtype="http://schema.org/Article"><h2 class="single-title" itemprop="name headline"><span title="转载" class="icon-repost"><i class="fa-solid fa-share fa-fw" aria-hidden="true"></i></span><a href="/ai-server/aef70e5/">Linux系统分区策略</a>
+</header><div class="search-dropdown desktop">
+    <div id="search-dropdown-desktop"></div>
+  </div>
+  <div class="search-dropdown mobile">
+    <div id="search-dropdown-mobile"></div>
+  </div><main class="container"><div class="page home posts"><article class="single summary" itemscope itemtype="http://schema.org/Article"><h2 class="single-title" itemprop="name headline"><span title="转载" class="icon-repost"><i class="fa-solid fa-share fa-fw" aria-hidden="true"></i></span><a href="/ai-server/a1df1f9/">BIOS优化</a>
+  </h2><div class="post-meta"><span class="post-author"><span class="author"><img class="avatar" src='/logo.jpg' alt="pr_zutto" height="16" width="16">&nbsp;pr_zutto</span></span>&nbsp;<span class="post-publish" title='2025-08-23 19:45:16'>发布于 <time datetime="2025-08-23">2025-08-23</time></span><span class="post-included-in">&nbsp;收录于 <a href="/categories/ai-%E5%B7%A5%E4%BD%9C%E7%AB%99-%E5%AE%8C%E5%85%A8%E9%85%8D%E7%BD%AE%E6%8C%87%E5%8D%97/" class="post-category" title="分类 - AI-工作站 完全配置指南"><i class="fa-regular fa-folder fa-fw" aria-hidden="true"></i> AI-工作站 完全配置指南</a></span></div><div class="content"><p>这是本系列的BIOS优化篇，参考了 AMD 官方文档，旨在帮助您优化基于 <strong>AMD EPYC™ 7002 系列处理器</strong>的系统 BIOS 设置，以获得最佳的 AI 工作负载性能。</p></div><div class="post-footer">
+    <a href="/ai-server/a1df1f9/">阅读全文</a><div class="post-tags"><i class="fa-solid fa-tags fa-fw me-1" aria-hidden="true"></i><a href='/tags/ai-workstation/' class="post-tag">AI-Workstation</a><a href='/tags/bios-tuning/' class="post-tag">BIOS Tuning</a></div></div>
+</article><article class="single summary" itemscope itemtype="http://schema.org/Article"><h2 class="single-title" itemprop="name headline"><span title="转载" class="icon-repost"><i class="fa-solid fa-share fa-fw" aria-hidden="true"></i></span><a href="/ai-server/aef70e5/">Linux系统分区策略</a>
   </h2><div class="post-meta"><span class="post-author"><span class="author"><img class="avatar" src='/logo.jpg' alt="pr_zutto" height="16" width="16">&nbsp;pr_zutto</span></span>&nbsp;<span class="post-publish" title='2025-08-19 21:38:07'>发布于 <time datetime="2025-08-19">2025-08-19</time></span><span class="post-included-in">&nbsp;收录于 <a href="/categories/ai-%E5%B7%A5%E4%BD%9C%E7%AB%99-%E5%AE%8C%E5%85%A8%E9%85%8D%E7%BD%AE%E6%8C%87%E5%8D%97/" class="post-category" title="分类 - AI-工作站 完全配置指南"><i class="fa-regular fa-folder fa-fw" aria-hidden="true"></i> AI-工作站 完全配置指南</a></span></div><div class="content"><p>本系列的AI-工作站的硬盘配置是SSD+HDD组合，合理分配和优化这些资源非常重要。</p>
 <p>系统：Ubuntu-24.04</p></div><div class="post-footer">
     <a href="/ai-server/aef70e5/">阅读全文</a><div class="post-tags"><i class="fa-solid fa-tags fa-fw me-1" aria-hidden="true"></i><a href='/tags/ai-workstation/' class="post-tag">AI-Workstation</a><a href='/tags/partition-policy/' class="post-tag">Partition Policy</a></div></div>
@@ -91,5 +126,5 @@
         </div><div class="fixed-button view-comments d-none" role="button" aria-label="查看评论"><i class="fa-solid fa-comment fa-fw" aria-hidden="true"></i></div></div><div id="mask"></div><noscript>
     <div class="noscript-warning">该网站在启用 JavaScript 的情况下效果最佳。</div>
   </noscript>
-</div><link rel="stylesheet" href="/lib/lightgallery/css/lightgallery-bundle.min.css"><link rel="stylesheet" href="/lib/pace/themes/blue/pace-theme-minimal.css"><script src="/lib/lightgallery/lightgallery.min.js" defer></script><script src="/lib/lightgallery/plugins/thumbnail/lg-thumbnail.min.js" defer></script><script src="/lib/lightgallery/plugins/zoom/lg-zoom.min.js" defer></script><script src="/lib/sharer/sharer.min.js" async defer></script><script src="/lib/typeit/index.umd.js" defer></script><script src="https://vercount.one/js" async defer></script><script src="/lib/pace/pace.min.js" async defer></script><script>window.config={"code":{"copyTitle":"复制到剪贴板","editLockTitle":"锁定可编辑代码块","editUnLockTitle":"解锁可编辑代码块","editable":true,"maxShownLines":10},"enablePWA":true,"lightgallery":true,"typeit":{"cursorChar":"|","cursorSpeed":1000,"duration":-1,"loop":false,"speed":100},"version":"v0.4.0-alpha-20250805041424-57ccd470"};</script><script src="/js/theme.min.js" defer></script></body>
+</div><link rel="stylesheet" href="/lib/lightgallery/css/lightgallery-bundle.min.css"><link rel="stylesheet" href="/lib/pace/themes/blue/pace-theme-minimal.css"><script src="/lib/autocomplete/autocomplete.min.js" defer></script><script src="/lib/fuse/fuse.min.js" defer></script><script src="/lib/lightgallery/lightgallery.min.js" defer></script><script src="/lib/lightgallery/plugins/thumbnail/lg-thumbnail.min.js" defer></script><script src="/lib/lightgallery/plugins/zoom/lg-zoom.min.js" defer></script><script src="/lib/sharer/sharer.min.js" async defer></script><script src="/lib/typeit/index.umd.js" defer></script><script src="https://vercount.one/js" async defer></script><script src="/lib/pace/pace.min.js" async defer></script><script>window.config={"code":{"copyTitle":"复制到剪贴板","editLockTitle":"锁定可编辑代码块","editUnLockTitle":"解锁可编辑代码块","editable":true,"maxShownLines":10},"enablePWA":true,"lightgallery":true,"search":{"distance":100,"findAllMatches":false,"fuseIndexURL":"/search.json","highlightTag":"em","ignoreFieldNorm":false,"ignoreLocation":false,"isCaseSensitive":false,"location":0,"maxResultLength":10,"minMatchCharLength":2,"noResultsFound":"没有找到结果","snippetLength":30,"threshold":0.3,"type":"fuse","useExtendedSearch":false},"typeit":{"cursorChar":"|","cursorSpeed":1000,"duration":-1,"loop":false,"speed":100},"version":"v0.4.0-alpha-20250805041424-57ccd470"};</script><script src="/js/theme.min.js" defer></script></body>
 </html>

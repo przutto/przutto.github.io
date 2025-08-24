@@ -8,8 +8,16 @@
     <language>en</language>
     <managingEditor>przutto520@gmail.com (pr_zutto)</managingEditor>
     <webMaster>przutto520@gmail.com (pr_zutto)</webMaster>
-    <lastBuildDate>Tue, 19 Aug 2025 22:20:08 +0800</lastBuildDate>
+    <lastBuildDate>Sat, 23 Aug 2025 20:35:32 +0800</lastBuildDate>
     <atom:link href="https://przutto.github.io/en/tags/ai-workstation/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>BIOS Optimization</title>
+      <link>https://przutto.github.io/en/ai-server/fb8e9b2/</link>
+      <pubDate>Sat, 23 Aug 2025 20:35:32 +0800</pubDate><author>przutto520@gmail.com (pr_zutto)</author>
+      <guid>https://przutto.github.io/en/ai-server/fb8e9b2/</guid>
+      <category domain="https://przutto.github.io/en/categories/complete-ai-workstation-configuration-guide/">Complete AI Workstation Configuration Guide</category>
+      <description>&lt;p&gt;This guide is part of a series on BIOS optimization, with reference to official AMD documentation. Its purpose is to help you optimize the BIOS settings of your &lt;strong&gt;AMD EPYC™ 7002 Series processor&lt;/strong&gt; based system for the best possible AI workload performance.&lt;/p&gt;</description>
+    </item>
     <item>
       <title>Linux System Partition Policy</title>
       <link>https://przutto.github.io/en/ai-server/1b15ccc/</link>

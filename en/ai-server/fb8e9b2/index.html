@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html itemscope itemtype="http://schema.org/WebPage" lang="en">
+  <head>
+    
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+    <meta name="robots" content="noodp" />
+    <title>BIOS Optimization - Origami Mind</title><meta name="author" content="pr_zutto">
+<meta name="description" content="This guide is part of a series on BIOS optimization, with reference to official AMD documentation. Its purpose is to help you optimize the BIOS settings of your AMD EPYC™ 7002 Series processor based system for the best possible AI workload performance.
+"><meta name="keywords" content='AI, workstation, BIOS'>
+  <meta itemprop="name" content="BIOS Optimization">
+  <meta itemprop="description" content="This guide is part of a series on BIOS optimization, with reference to official AMD documentation. Its purpose is to help you optimize the BIOS settings of your AMD EPYC™ 7002 Series processor based system for the best possible AI workload performance.">
+  <meta itemprop="datePublished" content="2025-08-23T20:35:32+08:00">
+  <meta itemprop="dateModified" content="2025-08-23T20:35:32+08:00">
+  <meta itemprop="wordCount" content="903">
+  <meta itemprop="keywords" content="AI,workstation,BIOS"><meta property="og:url" content="https://przutto.github.io/en/ai-server/fb8e9b2/">
+  <meta property="og:site_name" content="Origami Mind">
+  <meta property="og:title" content="BIOS Optimization">
+  <meta property="og:description" content="This guide is part of a series on BIOS optimization, with reference to official AMD documentation. Its purpose is to help you optimize the BIOS settings of your AMD EPYC™ 7002 Series processor based system for the best possible AI workload performance.">
+  <meta property="og:locale" content="en">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="ai-server">
+    <meta property="article:published_time" content="2025-08-23T20:35:32+08:00">
+    <meta property="article:modified_time" content="2025-08-23T20:35:32+08:00">
+    <meta property="article:tag" content="AI-Workstation">
+    <meta property="article:tag" content="BIOS Tuning">
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="BIOS Optimization">
+  <meta name="twitter:description" content="This guide is part of a series on BIOS optimization, with reference to official AMD documentation. Its purpose is to help you optimize the BIOS settings of your AMD EPYC™ 7002 Series processor based system for the best possible AI workload performance.">
+<meta name="application-name" content="Origami Mind">
+<meta name="apple-mobile-web-app-title" content="Origami Mind"><meta name="theme-color" data-light="#f8f8f8" data-dark="#252627" content="#f8f8f8"><meta name="msapplication-TileColor" content="#da532c"><link rel="icon" href="/favicon.svg"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" type="text/html" href="https://przutto.github.io/en/ai-server/fb8e9b2/" title="BIOS Optimization - Origami Mind" /><link rel="prev" type="text/html" href="https://przutto.github.io/en/ai-server/1b15ccc/" title="Linux System Partition Policy" /><link rel="alternate" type="text/markdown" href="https://przutto.github.io/en/ai-server/fb8e9b2/index.md" title="BIOS Optimization - Origami Mind"><link rel="stylesheet" href="/css/style.min.css"><link rel="preload" href="/lib/fontawesome-free/all.min.css" as="style" onload="this.removeAttribute('onload');this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"></noscript><link rel="preload" href="/lib/animate/animate.min.css" as="style" onload="this.removeAttribute('onload');this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="/lib/animate/animate.min.css"></noscript><script type="application/ld+json">
+  {
+    "@context": "http://schema.org",
+    "@type": "BlogPosting",
+    "headline": "BIOS Optimization",
+    "inLanguage": "en",
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https:\/\/przutto.github.io\/en\/ai-server\/fb8e9b2\/"
+    },"genre": "posts","keywords": "AI-Workstation, BIOS Tuning","wordcount":  903 ,
+    "url": "https:\/\/przutto.github.io\/en\/ai-server\/fb8e9b2\/","datePublished": "2025-08-23T20:35:32+08:00","dateModified": "2025-08-23T20:35:32+08:00","publisher": {
+      "@type": "Organization",
+      "name": ""},"author": {
+        "@type": "Person",
+        "name": "pr_zutto"
+      },"description": ""
+  }
+  </script><script src="/js/head/color-scheme.min.js"></script></head>
+  <body data-header-desktop="sticky" data-header-mobile="auto"><div class="wrapper" data-page-style="wide"><header class="desktop animate__faster" id="header-desktop">
+  <div class="header-wrapper">
+    <div class="header-title">
+      <a href="/en/" title="Origami Mind"><img class="logo" src='/favicon.svg' alt="Origami Mind" height="32" width="32"><span class="typeit"><template>Origami Mind</template></span></a><span class="header-subtitle"></span></div>
+    <nav>
+      <ul class="menu"><li class="menu-item">
+              <a class="menu-link" href="/en/archives/"><i class="fa-solid fa-archive"></i> Archives</a></li><li class="menu-item">
+              <a class="menu-link" href="/en/tags/"><i class="fa-solid fa-tags"></i> Tags</a></li><li class="menu-item">
+              <a class="menu-link" href="/en/categories/"><i class="fa-solid fa-folder-tree"></i> Categories</a></li><li class="menu-item delimiter"></li><li class="menu-item search" id="search-desktop">
+            <input type="text" placeholder="Search titles or contents ..." id="search-input-desktop">
+            <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-desktop" title="Search">
+              <i class="fa-solid fa-search fa-fw" aria-hidden="true"></i>
+            </a>
+            <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-desktop" title="Clear">
+              <i class="fa-solid fa-times-circle fa-fw" aria-hidden="true"></i>
+            </a>
+            <span class="search-button search-loading" id="search-loading-desktop">
+              <i class="fa-solid fa-spinner fa-fw fa-spin" aria-hidden="true"></i>
+            </span>
+          </li><li class="menu-item theme-switch" title="Switch Theme">
+          <i class="fa-solid fa-adjust fa-fw" aria-hidden="true"></i>
+        </li><li class="menu-item language-switch">
+            <span role="button" aria-label="Select Language" title="Select Language"><i class="fa-solid fa-language fa-fw" aria-hidden="true"></i></span>
+            <ul class="sub-menu"><li class="menu-item"><span class="text-secondary" title="English">English</span></li><li class="menu-item"><a href="/ai-server/a1df1f9/" class="menu-link" title="简体中文">简体中文</a></li></ul>
+          </li></ul>
+    </nav>
+  </div>
+</header><header class="mobile animate__faster" id="header-mobile">
+  <div class="header-container">
+    <div class="header-wrapper">
+      <div class="header-title">
+        <a href="/en/" title="Origami Mind"><img class="logo" src='/favicon.svg' alt="Origami Mind" height="26" width="26"><span class="typeit"><template>Origami Mind</template></span></a><span class="header-subtitle"></span></div>
+      <div class="menu-toggle" id="menu-toggle-mobile">
+        <span></span><span></span><span></span>
+      </div>
+    </div>
+    <nav>
+      <ul class="menu" id="menu-mobile"><li class="search-wrapper">
+            <div class="search mobile" id="search-mobile">
+              <input type="text" placeholder="Search titles or contents ..." id="search-input-mobile">
+              <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-mobile" title="Search">
+                <i class="fa-solid fa-search fa-fw" aria-hidden="true"></i>
+              </a>
+              <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-mobile" title="Clear">
+                <i class="fa-solid fa-times-circle fa-fw" aria-hidden="true"></i>
+              </a>
+              <span class="search-button search-loading" id="search-loading-mobile">
+                <i class="fa-solid fa-spinner fa-fw fa-spin" aria-hidden="true"></i>
+              </span>
+            </div>
+            <a href="javascript:void(0);" class="search-cancel" id="search-cancel-mobile">
+              Cancel
+            </a>
+          </li><li class="menu-item"><a class="menu-link" href="/en/archives/"><i class="fa-solid fa-archive"></i> Archives</a></li><li class="menu-item"><a class="menu-link" href="/en/tags/"><i class="fa-solid fa-tags"></i> Tags</a></li><li class="menu-item"><a class="menu-link" href="/en/categories/"><i class="fa-solid fa-folder-tree"></i> Categories</a></li><li class="menu-item menu-system">
+          <span class="menu-system-item theme-switch" title="Switch Theme"><i class="fa-solid fa-adjust fa-fw" aria-hidden="true"></i></span><span class="menu-system-item language-switch">
+              <span role="button" aria-label="Select Language" title="Select Language">English<i class="dropdown-icon fa-solid fa-chevron-down" aria-hidden="true"></i></span>
+              <select class="language-select" onchange="location = this.value;"><option value="/en/ai-server/fb8e9b2/" selected disabled>English</option><option value="/ai-server/a1df1f9/">简体中文</option></select>
+            </span></li>
+      </ul>
+    </nav>
+  </div>
+</header><div class="search-dropdown desktop">
+    <div id="search-dropdown-desktop"></div>
+  </div>
+  <div class="search-dropdown mobile">
+    <div id="search-dropdown-mobile"></div>
+  </div><main class="container"><aside class="aside-collection animate__animated animate__fadeIn animate__faster" aria-label="Collections"><div class="details related-details open">
+      <div class="details-summary related-summary">
+        <i class="fa-solid fa-fire fa-fade text-danger fa-fw" aria-hidden="true"></i>
+        <span class="related-title">Related Content</span><i class="details-icon fa-solid fa-angle-right fa-fw" aria-hidden="true"></i></div>
+      <div class="details-content related-content">
+        <ul class="related-list"><li class="related-item">
+              <a href="/en/ai-server/1b15ccc/" title="Linux System Partition Policy">Linux System Partition Policy</a></li><li class="related-item">
+              <a href="/en/ai-server/80b0c46/" title="AI Workstation OS Selection">AI Workstation OS Selection</a></li><li class="related-item">
+              <a href="/en/ai-server/1558208/" title="The Ultimate Guide to Cost-Effective AI Workstation Hardware Selection">The Ultimate Guide to Cost-Effective AI Workstation Hardware Selection</a></li></ul>
+      </div>
+    </div></aside>
+
+  <article class="page single">
+    <div class="header"><h1 class="single-title animate__animated animate__flipInX"><span title="Repost" class="icon-repost"><i class="fa-solid fa-pen" aria-hidden="true"></i></span><span>BIOS Optimization</span>
+      </h1><p class="single-subtitle animate__animated animate__fadeIn">A Guide to BIOS Optimization for AMD EPYC 7002 Processors for AI Workloads</p></div><div class="post-meta">
+      <div class="post-meta-line"><span class="post-author"><span class="author"><img class="avatar" src='/logo.jpg' alt="pr_zutto" height="16" width="16">&nbsp;pr_zutto</span></span><span class="post-included-in">&nbsp;included in <a href="/en/categories/complete-ai-workstation-configuration-guide/" class="post-category" title="Category - Complete AI Workstation Configuration Guide"><i class="fa-regular fa-folder fa-fw" aria-hidden="true"></i> Complete AI Workstation Configuration Guide</a></span></div><div class="post-meta-line"><span title="published on 2025-08-23 20:35:32"><i class="fa-solid fa-calendar-days fa-fw me-1" aria-hidden="true"></i><time datetime="2025-08-23">2025-08-23</time></span>&nbsp;<span title="903 words"><i class="fa-solid fa-pencil-alt fa-fw me-1" aria-hidden="true"></i>About 1000 words</span>&nbsp;<span><i class="fa-regular fa-clock fa-fw me-1" aria-hidden="true"></i>5 minutes</span>&nbsp;<span id="busuanzi_container_page_pv" class="busuanzi_visitors comment-visitors" data-flag-title="BIOS Optimization"><i class="fa-regular fa-eye fa-fw me-1" aria-hidden="true"></i><span id="busuanzi_value_page_pv">-</span>&nbsp;views
+          </span>&nbsp;</div>
+    </div><div class="details toc" id="toc-static" data-kept="false">
+        <div class="details-summary toc-title">
+          <span>Contents</span>
+          <span><i class="details-icon fa-solid fa-angle-right" aria-hidden="true"></i></span>
+        </div>
+        <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#characteristics-of-ai-workloads-and-optimization-goals">Characteristics of AI Workloads and Optimization Goals</a></li>
+        <li><a href="#key-bios-settings-explained-in-detail">Key BIOS Settings Explained in Detail</a>
+          <ul>
+            <li><a href="#1-numa-configuration-nps---numa-nodes-per-socket">1. NUMA Configuration (NPS - NUMA Nodes Per Socket)</a></li>
+            <li><a href="#2-core-performance-and-power-settings">2. Core Performance and Power Settings</a></li>
+            <li><a href="#3-memory-settings">3. Memory Settings</a></li>
+            <li><a href="#4-pcie-and-iommu">4. PCIe and IOMMU</a></li>
+          </ul>
+        </li>
+        <li><a href="#recommended-baseline-bios-settings">Recommended Baseline BIOS Settings</a>
+          <ul>
+            <li><a href="#acpi-settings">ACPI Settings</a></li>
+            <li><a href="#north-bridge-configuration">North Bridge Configuration</a></li>
+            <li><a href="#memory-configuration">Memory Configuration</a></li>
+            <li><a href="#cpu-configuration">CPU Configuration</a></li>
+            <li><a href="#pci-devices-common-settings">PCI Devices Common Settings</a></li>
+          </ul>
+        </li>
+        <li><a href="#general-tuning-principles-and-next-steps">General Tuning Principles and Next Steps</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav></div>
+      </div><div class="content" id="content"><p>This guide is part of a series on BIOS optimization, with reference to official AMD documentation. Its purpose is to help you optimize the BIOS settings of your <strong>AMD EPYC™ 7002 Series processor</strong> based system for the best possible AI workload performance.</p>
+<hr>
+<p>Reference：</p>
+<p><a href="https://www.amd.com/content/dam/amd/en/documents/epyc-technical-docs/tuning-guides/amd-epyc-7002-tg-hpc-56827.pdf"target="_blank" rel="external nofollow noopener noreferrer">High Performance Computing (HPC) Tuning Guide for AMD EPYC™ 7002 Series Processors</a></p>
+<p><a href="https://www.amd.com/content/dam/amd/en/documents/epyc-technical-docs/tuning-guides/58467_amd-epyc-9005-tg-bios-and-workload.pdf"target="_blank" rel="external nofollow noopener noreferrer">AMD EPYC™ 9005 BIOS &amp; WORKLOAD TUNING GUIDE</a></p>
+<hr>
+<h3 class="heading-element" id="characteristics-of-ai-workloads-and-optimization-goals"><span>Characteristics of AI Workloads and Optimization Goals</span>
+  <a href="#characteristics-of-ai-workloads-and-optimization-goals" class="heading-mark">
+    <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>
+  </a>
+</h3><p>AI workloads, especially deep learning, have extremely high demands on computing resources, which are mainly reflected in:</p>
+<ul>
+<li><strong>High floating-point computation:</strong> It is necessary to make full use of dedicated instructions like <strong>AVX2</strong> and keep the core frequency at the highest possible level.</li>
+<li><strong>High memory bandwidth and capacity:</strong> The loading and processing of large-scale datasets are highly sensitive to memory speed and <strong>NUMA</strong> topology.</li>
+<li><strong>Efficient data transfer:</strong> Fast interconnects (e.g., <strong>PCIe</strong>) are crucial for offloading computing tasks to accelerators such as GPUs.</li>
+</ul>
+<p>Given these characteristics, the following are the BIOS settings that need special attention.</p>
+<h3 class="heading-element" id="key-bios-settings-explained-in-detail"><span>Key BIOS Settings Explained in Detail</span>
+  <a href="#key-bios-settings-explained-in-detail" class="heading-mark">
+    <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>
+  </a>
+</h3><h4 class="heading-element" id="1-numa-configuration-nps---numa-nodes-per-socket"><span>1. NUMA Configuration (NPS - NUMA Nodes Per Socket)</span>
+  <a href="#1-numa-configuration-nps---numa-nodes-per-socket" class="heading-mark">
+    <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>
+  </a>
+</h4><p><strong>Goal:</strong> Optimize data locality and memory bandwidth. AI workloads are extremely sensitive to data access patterns.</p>
+<ul>
+<li>
+<p><strong>Recommendation:</strong> For most AI workloads, it is recommended to set <strong>NPS</strong> to <strong>2</strong> or <strong>4</strong>.</p>
+<ul>
+<li><strong>NPS=2:</strong> Creates two NUMA domains per processor socket. This effectively utilizes memory bandwidth and is an excellent choice for balancing performance and versatility.</li>
+<li><strong>NPS=4:</strong> Creates four NUMA domains per processor socket. This setting is suitable for highly parallel workloads where the dataset for each NUMA node is relatively small. By explicitly binding processes to specific NUMA nodes, you can achieve the ultimate in data locality.</li>
+</ul>
+</li>
+<li>
+<p><strong>How to check:</strong> In a Linux system, you can use the <code>numactl --hardware</code> or <code>hwloc-ls</code> commands to verify the changed NUMA topology.</p>
+</li>
+</ul>
+<div class="details admonition note open">
+  <div class="details-summary admonition-title"><i class="icon fa-fw fa-solid fa-pencil-alt" aria-hidden="true"></i>Note<i class="details-icon fa-solid fa-angle-right fa-fw" aria-hidden="true"></i></div>
+  <div class="details-content">
+    <div class="admonition-content">However, in practice, it has been found that NPS=1 is a better choice for inference tasks.</div>
+  </div>
+</div>
+<h4 class="heading-element" id="2-core-performance-and-power-settings"><span>2. Core Performance and Power Settings</span>
+  <a href="#2-core-performance-and-power-settings" class="heading-mark">
+    <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>
+  </a>
+</h4><p><strong>Goal:</strong> Ensure that CPU cores always run stably at the highest frequency and minimize latency.</p>
+<ul>
+<li><strong>Performance mode:</strong> Set the <strong>&ldquo;Determinism Slider&rdquo;</strong> or a similar performance mode option to <strong>&ldquo;Performance&rdquo;</strong> or <strong>&ldquo;Max Performance.&rdquo;</strong> This prioritizes performance over energy efficiency, keeping the core clock high.</li>
+<li><strong>C-states:</strong> Set <strong>&ldquo;Global C-state Control&rdquo;</strong> or <strong>&ldquo;C-States&rdquo;</strong> to <strong>&ldquo;Disabled.&rdquo;</strong> C-states are CPU power-saving modes. While they save energy, they introduce latency when cores need to wake up from a low-power state, which can affect the consistency of AI training.</li>
+<li><strong>P-states:</strong> Look for settings like <strong>&ldquo;P-states Control,&rdquo;</strong> <strong>&ldquo;DF P-states,&rdquo;</strong> or <strong>&ldquo;APBDIS.&rdquo;</strong> <strong>Disable</strong> P-states or ensure that the processor is locked in its highest performance state (P0). This prevents the CPU frequency from dynamically adjusting with the load, ensuring the highest clock speed.</li>
+</ul>
+<h4 class="heading-element" id="3-memory-settings"><span>3. Memory Settings</span>
+  <a href="#3-memory-settings" class="heading-mark">
+    <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>
+  </a>
+</h4><p><strong>Goal:</strong> Maximize memory bandwidth while reducing latency.</p>
+<ul>
+<li><strong>Memory speed:</strong> Configure the memory to run at the <strong>optimal latency</strong> supported by the motherboard and DIMMs, for example, <strong>DDR4-2933 MT/s.</strong> 3200 MT/s is not recommended because the Infinity Fabric clock for the 7002 series is 2933, and keeping the memory clock synchronized with the Infinity Fabric clock is a better choice for low latency.</li>
+<li><strong>Memory interleaving:</strong> Ensure that the memory interleaving is configured to provide the <strong>best bandwidth.</strong> Generally, filling all <strong>8 memory channels</strong> per socket provides the maximum bandwidth. For specific settings, refer to your system&rsquo;s official documentation.</li>
+</ul>
+<h4 class="heading-element" id="4-pcie-and-iommu"><span>4. PCIe and IOMMU</span>
+  <a href="#4-pcie-and-iommu" class="heading-mark">
+    <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>
+  </a>
+</h4><p><strong>Goal:</strong> Ensure optimal communication between GPUs and other accelerators.</p>
+<ul>
+<li><strong>PCIe generation:</strong> Set the PCIe slot used for the GPU to its <strong>supported highest generation and link width</strong> (e.g., <strong>PCIe Gen4 x16</strong>).</li>
+<li><strong>Above 4G Decoding:</strong> Be sure to <strong>enable</strong> this option. This is crucial for systems with a large amount of GPU memory, allowing the system to correctly identify and map I/O memory over 4GB.</li>
+<li><strong>IOMMU:</strong> If you are using virtualization or container technology that requires device passthrough, keep <strong>IOMMU</strong> <strong>enabled.</strong> For bare-metal AI training, disabling this option may provide a negligible performance boost, but it is generally recommended to keep it enabled for system stability and future flexibility.</li>
+</ul>
+<h3 class="heading-element" id="recommended-baseline-bios-settings"><span>Recommended Baseline BIOS Settings</span>
+  <a href="#recommended-baseline-bios-settings" class="heading-mark">
+    <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>
+  </a>
+</h3><p>The table below provides a set of verified <strong>baseline BIOS settings</strong> suitable for AI workloads.</p>
+<h4 class="heading-element" id="acpi-settings"><span>ACPI Settings</span>
+  <a href="#acpi-settings" class="heading-mark">
+    <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>
+  </a>
+</h4><figure><a class="lightgallery" href="/ai-server/a1df1f9/images/ACPI%20Settings.png" title="ACPI Settings" data-thumbnail="/ai-server/a1df1f9/images/ACPI%20Settings.png" data-sub-html="<h2>ACPI Settings</h2>"><img loading="lazy" src='/ai-server/a1df1f9/images/ACPI%20Settings.png' alt="ACPI Settings" height="952" width="60%"></a><figcaption class="image-caption">ACPI Settings</figcaption>
+  </figure>
+<table>
+  <thead>
+      <tr>
+          <th style="text-align: left">Item</th>
+          <th style="text-align: left">Setting</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td style="text-align: left">High Precision Event Timer</td>
+          <td style="text-align: left">[Disabled]</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">NUMA Nodes Per Socket</td>
+          <td style="text-align: left">[NPS1]</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">ACPI SRAT L3 Cache As NUMA Domain</td>
+          <td style="text-align: left">[Enabled]</td>
+      </tr>
+  </tbody>
+</table>
+<h4 class="heading-element" id="north-bridge-configuration"><span>North Bridge Configuration</span>
+  <a href="#north-bridge-configuration" class="heading-mark">
+    <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>
+  </a>
+</h4><figure><a class="lightgallery" href="/ai-server/a1df1f9/images/North%20Bridge%20Configuration.png" title="North Bridge Configuration" data-thumbnail="/ai-server/a1df1f9/images/North%20Bridge%20Configuration.png" data-sub-html="<h2>North Bridge Configuration</h2>"><img loading="lazy" src='/ai-server/a1df1f9/images/North%20Bridge%20Configuration.png' alt="North Bridge Configuration" height="960" width="60%"></a><figcaption class="image-caption">North Bridge Configuration</figcaption>
+  </figure>
+<table>
+  <thead>
+      <tr>
+          <th style="text-align: left">Item</th>
+          <th style="text-align: left">Setting</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td style="text-align: left">Determinism Control</td>
+          <td style="text-align: left">[Manual]</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">Determinism Slider</td>
+          <td style="text-align: left">[Performance]</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">cTDP Control</td>
+          <td style="text-align: left">[Manual]</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">cTDP</td>
+          <td style="text-align: left">220</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">IOMMU</td>
+          <td style="text-align: left">[Enabled]</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">Package Power Limit Control</td>
+          <td style="text-align: left">[Manual]</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">Package Power Limit</td>
+          <td style="text-align: left">220</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">APBDIS</td>
+          <td style="text-align: left">[0]</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">DF Cstates</td>
+          <td style="text-align: left">[Disabled]</td>
+      </tr>
+  </tbody>
+</table>
+<h4 class="heading-element" id="memory-configuration"><span>Memory Configuration</span>
+  <a href="#memory-configuration" class="heading-mark">
+    <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>
+  </a>
+</h4><figure><a class="lightgallery" href="/ai-server/a1df1f9/images/Memory%20Configuration.png" title="Memory Configuration" data-thumbnail="/ai-server/a1df1f9/images/Memory%20Configuration.png" data-sub-html="<h2>Memory Configuration</h2>"><img loading="lazy" src='/ai-server/a1df1f9/images/Memory%20Configuration.png' alt="Memory Configuration" height="963" width="60%"></a><figcaption class="image-caption">Memory Configuration</figcaption>
+  </figure>
+<table>
+  <thead>
+      <tr>
+          <th style="text-align: left">Item</th>
+          <th style="text-align: left">Setting</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td style="text-align: left">Memory Clock</td>
+          <td style="text-align: left">[2933MHz]</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">TSME</td>
+          <td style="text-align: left">[Disabled]</td>
+      </tr>
+  </tbody>
+</table>
+<h4 class="heading-element" id="cpu-configuration"><span>CPU Configuration</span>
+  <a href="#cpu-configuration" class="heading-mark">
+    <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>
+  </a>
+</h4><figure><a class="lightgallery" href="/ai-server/a1df1f9/images/CPU%20Configuration.png" title="CPU Configuration" data-thumbnail="/ai-server/a1df1f9/images/CPU%20Configuration.png" data-sub-html="<h2>CPU Configuration</h2>"><img loading="lazy" src='/ai-server/a1df1f9/images/CPU%20Configuration.png' alt="CPU Configuration" height="961" width="60%"></a><figcaption class="image-caption">CPU Configuration</figcaption>
+  </figure>
+<table>
+  <thead>
+      <tr>
+          <th style="text-align: left">Item</th>
+          <th style="text-align: left">Setting</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td style="text-align: left">Global C-state Control</td>
+          <td style="text-align: left">[Disabled]</td>
+      </tr>
+  </tbody>
+</table>
+<h4 class="heading-element" id="pci-devices-common-settings"><span>PCI Devices Common Settings</span>
+  <a href="#pci-devices-common-settings" class="heading-mark">
+    <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>
+  </a>
+</h4><figure><a class="lightgallery" href="/ai-server/a1df1f9/images/PCI%20Devices%20Common%20Settings.png" title="PCI Devices Common Settings" data-thumbnail="/ai-server/a1df1f9/images/PCI%20Devices%20Common%20Settings.png" data-sub-html="<h2>PCI Devices Common Settings</h2>"><img loading="lazy" src='/ai-server/a1df1f9/images/PCI%20Devices%20Common%20Settings.png' alt="PCI Devices Common Settings" height="957" width="60%"></a><figcaption class="image-caption">PCI Devices Common Settings</figcaption>
+  </figure>
+<table>
+  <thead>
+      <tr>
+          <th style="text-align: left">Item</th>
+          <th style="text-align: left">Setting</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td style="text-align: left">Above 4G Decoding</td>
+          <td style="text-align: left">[Enabled]</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">SR-IOV Support</td>
+          <td style="text-align: left">[Enabled]</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">VGA Priority</td>
+          <td style="text-align: left">[Offboard]</td>
+      </tr>
+  </tbody>
+</table>
+<h3 class="heading-element" id="general-tuning-principles-and-next-steps"><span>General Tuning Principles and Next Steps</span>
+  <a href="#general-tuning-principles-and-next-steps" class="heading-mark">
+    <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>
+  </a>
+</h3><ul>
+<li><strong>Benchmarking and iteration:</strong> BIOS tuning is an iterative process. After each change, you should run specific AI workload benchmarks, measure performance (such as throughput, training speed), and adjust based on the results.</li>
+<li><strong>Operating system tuning:</strong> Don&rsquo;t forget that the BIOS is only part of the optimization process. OS-level optimizations are equally critical, such as using tools like <strong><code>numactl</code></strong> for CPU affinity binding, adjusting kernel parameters, or disabling unnecessary background services.</li>
+<li><strong>Software stack optimization:</strong> Make sure your AI frameworks (e.g., TensorFlow, PyTorch), underlying libraries (e.g., cuDNN, MKL, ROCm), and drivers (NVIDIA, AMD) are all updated to the latest versions and configured accordingly.</li>
+</ul>
+<p>By following this guide, you can significantly improve the performance and efficiency of your AMD EPYC 7002 system for AI workloads.</p></div><hr class="awesome-hr" />
+    <h2 id="see-also">Related Content</h2>
+    <ul><li>
+          <a href="/en/ai-server/1b15ccc/" title="Linux System Partition Policy">Linux System Partition Policy</a></li><li>
+          <a href="/en/ai-server/80b0c46/" title="AI Workstation OS Selection">AI Workstation OS Selection</a></li><li>
+          <a href="/en/ai-server/1558208/" title="The Ultimate Guide to Cost-Effective AI Workstation Hardware Selection">The Ultimate Guide to Cost-Effective AI Workstation Hardware Selection</a></li></ul><div class="post-footer" id="post-footer">
+  <div class="post-info">
+    <div class="post-info-line">
+      <div class="post-info-mod">
+        <span title="Updated on 2025-08-23 20:35:32">Updated on 2025-08-23&nbsp;</span>
+      </div><div class="post-info-license">
+            <span><a rel="license external nofollow noopener noreferrer" href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a></span>
+          </div></div><div class="post-info-line">
+        <div class="post-info-md"></div>
+        <div class="post-info-share">
+          <span><a href="javascript:void(0);" title="Share on X" data-sharer="twitter" data-url="https://przutto.github.io/en/ai-server/fb8e9b2/" data-title="BIOS Optimization" data-hashtags="AI-Workstation,BIOS Tuning"><i class="fa-brands fa-x-twitter fa-fw" aria-hidden="true"></i></a>
+  <a href="javascript:void(0);" title="Share on Facebook" data-sharer="facebook" data-url="https://przutto.github.io/en/ai-server/fb8e9b2/" data-hashtag="AI-Workstation"><i class="fa-brands fa-facebook-square fa-fw" aria-hidden="true"></i></a>
+  <a href="javascript:void(0);" title="Share on 微博" data-sharer="weibo" data-url="https://przutto.github.io/en/ai-server/fb8e9b2/" data-title="BIOS Optimization"><i class="fa-brands fa-weibo fa-fw" aria-hidden="true"></i></a>
+  </span>
+        </div>
+      </div></div>
+
+  <div class="post-info-more">
+    <section class="post-tags"><i class="fa-solid fa-tags fa-fw me-1" aria-hidden="true"></i><a href="/en/tags/ai-workstation/" class="post-tag" title="Tags - AI-Workstation">AI-Workstation</a><a href="/en/tags/bios-tuning/" class="post-tag" title="Tags - BIOS Tuning">BIOS Tuning</a></section>
+    <section>
+      <span><a href="javascript:void(0);" onclick="window.history.back();">Back</a></span>&nbsp;|&nbsp;<span><a href="/en/">Home</a></span>
+    </section>
+  </div><div class="post-nav"><a href="/en/ai-server/1b15ccc/" class="post-nav-item" rel="prev" title="Linux System Partition Policy"><i class="fa-solid fa-angle-left fa-fw" aria-hidden="true"></i>Linux System Partition Policy</a></div>
+</div>
+<div id="comments"><div id="gitalk" class="comment"></div><noscript>
+        Please enable JavaScript to view the comments powered by <a href="https://github.com/gitalk/gitalk" rel="external nofollow noopener noreferrer">Gitalk</a>.
+      </noscript></div></article>
+
+  <aside class="toc" id="toc-auto" aria-label="Contents"><h2 class="toc-title">Contents&nbsp;<i class="toc-icon fa-solid fa-angle-down fa-fw" aria-hidden="true"></i></h2>
+      <div class="toc-content" id="toc-content-auto"></div></aside></main><footer class="footer">
+    <div class="footer-container"><div class="footer-line powered">Powered by <a href="https://gohugo.io/" target="_blank" rel="external nofollow noopener noreferrer" title="Hugo 0.148.2"><img class="hugo-icon" src="/images/hugo.min.svg" alt="Hugo logo" /> Hugo</a> | Theme - <a href="https://github.com/hugo-fixit/FixIt" target="_blank" rel="external" title="FixIt v0.4.0-alpha-20250805041424-57ccd470"><img class="fixit-icon" src="/images/fixit.min.svg" alt="FixIt logo" /> FixIt</a>
+        </div><div class="footer-line copyright" itemscope itemtype="http://schema.org/CreativeWork"><i class="fa-regular fa-copyright fa-fw" aria-hidden="true"></i>
+            <span itemprop="copyrightYear">2025</span><span class="author" itemprop="copyrightHolder">
+              <a href="/en/">pr_zutto</a></span><span class="license footer-divider"><a rel="license external nofollow noopener noreferrer" href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a></span></div><div class="footer-line visitor">
+          <span id="busuanzi_container_site_uv" title='Total visitors'><i class="fa-regular fa-user fa-fw me-1" aria-hidden="true"></i><span id="busuanzi_value_site_uv"><i class="fa-solid fa-spinner fa-spin fa-fw" aria-hidden="true"></i></span></span><span id="busuanzi_container_site_pv" class="footer-divider" title='Total visits'><i class="fa-regular fa-eye fa-fw me-1" aria-hidden="true"></i><span id="busuanzi_value_site_pv"><i class="fa-solid fa-spinner fa-spin fa-fw" aria-hidden="true"></i></span></span>
+        </div></div>
+  </footer></div><div class="widgets"><div class="fixed-buttons animate__faster d-none"><div class="fixed-button back-to-top" role="button" aria-label="Back to Top"><i class="fa-solid fa-arrow-up fa-fw" aria-hidden="true"></i><span class="variant-numeric">0%</span>
+        </div><div class="fixed-button view-comments d-none" role="button" aria-label="View Comments"><i class="fa-solid fa-comment fa-fw" aria-hidden="true"></i></div></div><div id="mask"></div><noscript>
+    <div class="noscript-warning">This website works best with JavaScript enabled.</div>
+  </noscript>
+</div><link rel="stylesheet" href="/lib/gitalk/gitalk.min.css"><link rel="stylesheet" href="/lib/lightgallery/css/lightgallery-bundle.min.css"><link rel="stylesheet" href="/lib/pace/themes/blue/pace-theme-minimal.css"><script src="/lib/gitalk/gitalk.min.js"></script><script src="/lib/autocomplete/autocomplete.min.js" defer></script><script src="/lib/fuse/fuse.min.js" defer></script><script src="/lib/lightgallery/lightgallery.min.js" defer></script><script src="/lib/lightgallery/plugins/thumbnail/lg-thumbnail.min.js" defer></script><script src="/lib/lightgallery/plugins/zoom/lg-zoom.min.js" defer></script><script src="/lib/sharer/sharer.min.js" async defer></script><script src="/lib/typeit/index.umd.js" defer></script><script src="https://vercount.one/js" async defer></script><script src="/lib/pace/pace.min.js" async defer></script><script>window.config={"autoBookmark":true,"code":{"copyTitle":"Copy to clipboard","editLockTitle":"Lock editable code block","editUnLockTitle":"Unlock editable code block","editable":true,"maxShownLines":10},"comment":{"enable":true,"expired":false,"gitalk":{"admin":["przutto"],"clientID":"Ov23liaDAbz9yjMhhnQe","clientSecret":"219b54d39d1cd8ba90180e62c772b1d1d07b4224","id":"2025-08-23T20:35:32+08:00","owner":"przutto","repo":"gitalk-comments","title":"BIOS Optimization"}},"enablePWA":true,"lightgallery":true,"search":{"distance":100,"findAllMatches":false,"fuseIndexURL":"/en/search.json","highlightTag":"em","ignoreFieldNorm":false,"ignoreLocation":false,"isCaseSensitive":false,"location":0,"maxResultLength":10,"minMatchCharLength":2,"noResultsFound":"No results found","snippetLength":30,"threshold":0.3,"type":"fuse","useExtendedSearch":false},"typeit":{"cursorChar":"|","cursorSpeed":1000,"duration":-1,"loop":false,"speed":100},"version":"v0.4.0-alpha-20250805041424-57ccd470"};</script><script src="/js/theme.min.js" defer></script></body>
+</html>

@@ -8,8 +8,16 @@
     <language>zh-CN</language>
     <managingEditor>przutto520@gmail.com (pr_zutto)</managingEditor>
     <webMaster>przutto520@gmail.com (pr_zutto)</webMaster>
-    <lastBuildDate>Tue, 19 Aug 2025 21:38:07 +0800</lastBuildDate>
+    <lastBuildDate>Sat, 23 Aug 2025 19:45:16 +0800</lastBuildDate>
     <atom:link href="https://przutto.github.io/tags/ai-workstation/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>BIOS优化</title>
+      <link>https://przutto.github.io/ai-server/a1df1f9/</link>
+      <pubDate>Sat, 23 Aug 2025 19:45:16 +0800</pubDate><author>przutto520@gmail.com (pr_zutto)</author>
+      <guid>https://przutto.github.io/ai-server/a1df1f9/</guid>
+      <category domain="https://przutto.github.io/categories/ai-%E5%B7%A5%E4%BD%9C%E7%AB%99-%E5%AE%8C%E5%85%A8%E9%85%8D%E7%BD%AE%E6%8C%87%E5%8D%97/">AI-工作站 完全配置指南</category>
+      <description>&lt;p&gt;这是本系列的BIOS优化篇，参考了 AMD 官方文档，旨在帮助您优化基于 &lt;strong&gt;AMD EPYC™ 7002 系列处理器&lt;/strong&gt;的系统 BIOS 设置，以获得最佳的 AI 工作负载性能。&lt;/p&gt;</description>
+    </item>
     <item>
       <title>Linux系统分区策略</title>
       <link>https://przutto.github.io/ai-server/aef70e5/</link>
